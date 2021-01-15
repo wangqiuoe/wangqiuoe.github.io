@@ -5,5 +5,5 @@
 layout: home
 ---
 ### Meeting 0116
-[NNGP-development.pdf](http://wangqiuoe.github.io/recent_development_bak.pdf).
-[Intro of Gaussian Processes Regression.pdf](http://wangqiuoe.github.io/slides.pdf).
+* [NNGP-development.pdf](http://wangqiuoe.github.io/recent_development_bak.pdf).
+* [Intro of Gaussian Processes Regression.pdf](http://wangqiuoe.github.io/slides.pdf).
