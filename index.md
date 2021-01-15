@@ -4,3 +4,4 @@
 
 layout: home
 ---
+<embed src="https://wangqiuoe.github.io/recent_development.pdf" width="100%" height="850px"/>
