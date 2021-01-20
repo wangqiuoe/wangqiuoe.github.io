@@ -74,3 +74,5 @@ np.allclose(A @ x,b)  #True
 ## about stax
 ### `predict.py`
 * func `k_inv_y`: return $ K_{dd}^{-1}Y_d $ where the inverse calculated by `scipy.linalg.cho_factor` and `scipy.linalg.cho_solve`
+
+
