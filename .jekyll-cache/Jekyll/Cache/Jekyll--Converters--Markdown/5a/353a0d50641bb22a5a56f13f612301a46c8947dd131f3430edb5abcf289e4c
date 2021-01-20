@@ -1,0 +1,4 @@
+I"Õ<h2 id="about-python">about python</h2>
+<h3 id="funcx"><code class="language-plaintext highlighter-rouge">func(*x)</code></h3>
+<p>if <code class="language-plaintext highlighter-rouge">x</code> is a tuple, or list, then will pass all elements of <code class="language-plaintext highlighter-rouge">x</code> to <code class="language-plaintext highlighter-rouge">func</code> instead of a tuple or list <code class="language-plaintext highlighter-rouge">x</code>, i.e.,</p>
+:ET
