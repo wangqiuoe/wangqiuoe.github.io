@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes-for-Python-Package-Neural-Tangents"
+title:  "Notes for Python Package Neural Tangents"
 date:   2021-01-18 16:52:54 +0800
 categories: jekyll update 
 ---
