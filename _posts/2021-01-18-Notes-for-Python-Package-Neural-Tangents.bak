@@ -53,7 +53,7 @@ testObj.param1 = 5
 ``` 
 
 ### Cholesky decomposition
-* solve ` A=LL^T ` 
+* solve $ A=LL^T $ 
 ```python
 from scipy.linalg import cho_factor
 A = np.array([[9, 3, 1, 5], [3, 7, 5, 1], [1, 5, 9, 2], [5, 1, 2, 6]])
@@ -61,7 +61,7 @@ c, low = cho_factor(A, lower=True) # c is cholesky decomposition of A that cc'=A
 np.allclose(np.matmul(np.tril(c), np.tril(c).T),A)
 #True
 ```
-* solve ` Ax=b ` given cho\_factor of A
+* solve $ Ax=b $ given cho\_factor of A
 ```python
 from scipy.linalg import cho_factor, cho_solve
 A = np.array([[9, 3, 1, 5], [3, 7, 5, 1], [1, 5, 9, 2], [5, 1, 2, 6]])
