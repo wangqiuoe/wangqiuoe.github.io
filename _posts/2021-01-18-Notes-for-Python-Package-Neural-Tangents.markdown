@@ -2,6 +2,7 @@
 layout: post
 title:  "Notes for Python Package Neural Tangents"
 date:   2021-01-18 16:52:54 +0800
+bibliography: reference.bib 
 categories: jekyll update 
 ---
 ## about python
@@ -73,6 +74,26 @@ np.allclose(A @ x,b)  #True
 
 ## about stax
 ### `predict.py`
-* func `k_inv_y`: return $$ K_{dd}^{-1}Y_d $$ where the inverse calculated by `scipy.linalg.cho_factor` and `scipy.linalg.cho_solve`
+* func `k_inv_y`: return $$ (K_{dd} + \sigma^2\mathbb{I})^{-1}Y_d $$ where the inverse calculated by `scipy.linalg.cho_factor` and `scipy.linalg.cho_solve`, and the subscript $$d$$ denotes train set.
+### `stax.py`
+* `Dense()`, `Relu()` are all layer objects, which return `(init_fn, apply_fn, kernel_fn)`. Pay attention to `kernel_fu`, which realizes the forward propogation of recursive covariance function from layer to layer.
+* `ABRelu()` is used to realize `Relu()` with `a=0, b=1` which is equal to `max(x,0)`. And it realizes the analytical function of intergation (equation 5 and 11 in [1]) when activation function is relu. It uses
 
+$$
+arctan(\frac{\sqrt{1-\nu^{2}}}{\nu}) = arccos(\nu).
+$$
+
+* `Erf()`: is similar to `Tanh()`, mathematically 
+
+$$ erf(z) = \frac{2}{\sqrt{\pi}} \int^z_0e^{-t^2}dt $$
+
+![avatar](./tanh_erf.png)
+### `class Kernel`
+#### Attribute:
+* cov1: covariance of the first batch of inputs, $$ k(x,x) $$
+* cov2: optional covariance of the second batch of inputs, $$ k(x',x') $$ .
+* nngp: covariance between the first and second batches (NNGP), $$ k(x,x') $$.
+
+## References
+ - [1] [Deep Neural Networks as Gaussian Processes](https://arxiv.org/abs/1711.00165)
 

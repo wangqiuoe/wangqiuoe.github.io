@@ -1,4 +1,4 @@
-I"%<h2 id="about-python">about python</h2>
+I"ž,<h2 id="about-python">about python</h2>
 <h3 id="funcx"><code class="language-plaintext highlighter-rouge">func(*x)</code></h3>
 <p>if <code class="language-plaintext highlighter-rouge">x</code> is a tuple, or list, then will pass all elements of <code class="language-plaintext highlighter-rouge">x</code> to <code class="language-plaintext highlighter-rouge">func</code> instead of a tuple or list <code class="language-plaintext highlighter-rouge">x</code>, i.e.,</p>
 
@@ -68,7 +68,33 @@ testObj.param1 = 5
 <h2 id="about-stax">about stax</h2>
 <h3 id="predictpy"><code class="language-plaintext highlighter-rouge">predict.py</code></h3>
 <ul>
-  <li>func <code class="language-plaintext highlighter-rouge">k_inv_y</code>: return \(K_{dd}^{-1}Y_d\) where the inverse calculated by <code class="language-plaintext highlighter-rouge">scipy.linalg.cho_factor</code> and <code class="language-plaintext highlighter-rouge">scipy.linalg.cho_solve</code></li>
+  <li>func <code class="language-plaintext highlighter-rouge">k_inv_y</code>: return \((K_{dd} + \sigma^2\mathbb{I})^{-1}Y_d\) where the inverse calculated by <code class="language-plaintext highlighter-rouge">scipy.linalg.cho_factor</code> and <code class="language-plaintext highlighter-rouge">scipy.linalg.cho_solve</code>, and the subscript \(d\) denotes train set.
+    <h3 id="staxpy"><code class="language-plaintext highlighter-rouge">stax.py</code></h3>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Dense()</code>, <code class="language-plaintext highlighter-rouge">Relu()</code> are all layer objects, which return <code class="language-plaintext highlighter-rouge">(init_fn, apply_fn, kernel_fn)</code>. Pay attention to <code class="language-plaintext highlighter-rouge">kernel_fu</code>, which realizes the forward propogation of recursive covariance function from layer to layer.</li>
+  <li><code class="language-plaintext highlighter-rouge">ABRelu()</code> is used to realize <code class="language-plaintext highlighter-rouge">Relu()</code> with <code class="language-plaintext highlighter-rouge">a=0, b=1</code> which is equal to <code class="language-plaintext highlighter-rouge">max(x,0)</code>. And it realizes the analytical function of intergation (equation 5 and 11 in [1]) when activation function is relu. It uses</li>
+</ul>
+
+\[arctan(\frac{\sqrt{1-\nu^{2}}}{\nu}) = arccos(\nu).\]
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Erf()</code>: is similar to <code class="language-plaintext highlighter-rouge">Tanh()</code>, mathematically</li>
+</ul>
+
+\[erf(z) = \frac{2}{\sqrt{\pi}} \int^z_0e^{-t^2}dt\]
+
+<p><img src="./tanh_erf.png" alt="avatar" /></p>
+<h3 id="class-kernel"><code class="language-plaintext highlighter-rouge">class Kernel</code></h3>
+<h4 id="attribute">Attribute:</h4>
+<ul>
+  <li>cov1: covariance of the first batch of inputs, \(k(x,x)\)</li>
+  <li>cov2: optional covariance of the second batch of inputs, \(k(x',x')\) .</li>
+  <li>nngp: covariance between the first and second batches (NNGP), \(k(x,x')\).</li>
+</ul>
+
+<h2 id="references">References</h2>
+<ul>
+  <li>[1] <a href="https://arxiv.org/abs/1711.00165">Deep Neural Networks as Gaussian Processes</a></li>
 </ul>
 
 :ET
