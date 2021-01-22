@@ -83,11 +83,13 @@ $$
 arctan(\frac{\sqrt{1-\nu^{2}}}{\nu}) = arccos(\nu).
 $$
 
-* `Erf()`: is similar to `Tanh()`, mathematically 
+* `Erf()`: is similar to `Tanh()` as shown in picture, and  mathematically 
 
 $$ erf(z) = \frac{2}{\sqrt{\pi}} \int^z_0e^{-t^2}dt $$
 
-![avatar](./tanh_erf.png)
+{: style="text-align:center"}
+![](http://wangqiuoe.github.io/figures/tanh_erf.png){:width="500"}.
+
 ### `class Kernel`
 #### Attribute:
 * cov1: covariance of the first batch of inputs, $$ k(x,x) $$
