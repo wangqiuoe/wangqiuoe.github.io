@@ -7,7 +7,4 @@
 #
 layout: home
 ---
-### Gaussian Process Regressian
-* [NNGP development](http://wangqiuoe.github.io/recent_development_bak.pdf).
-* [Intro of Gaussian Processes Regression](http://wangqiuoe.github.io/slides.pdf).
 
