@@ -3,7 +3,6 @@ layout: post
 title:  "Install-CUTEST-for-MATLAB"
 date:   2021-07-04 00:00:00 +0800
 [bibliography: reference.bib]:#
-categories: jekyll update 
 ---
 ## about python
 ### `func(*x)`
