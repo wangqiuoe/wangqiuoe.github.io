@@ -35,9 +35,7 @@ And then add the environment variable of your Matlab path, i.e., adding below li
 ```shell
 export MYMATLAB="/Applications/MATLAB_R2021a.app"
 ```
-You should use your MATLAB version if it is not R20201a.
-
-You can check the definition of these variables, by opening a new terminal, and execute
+You should use your MATLAB version if it is not R20201a. You can check the definition of these variables, by opening a new terminal, and execute
 ```shell
 $ echo $MYMATLAB
 ```
