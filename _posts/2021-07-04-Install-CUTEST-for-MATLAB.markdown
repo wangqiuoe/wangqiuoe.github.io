@@ -47,7 +47,7 @@ and repeat opening a new terminal and executing
 ```shell
 $ echo $MYMATLAB
 ```
-3. Test. Now we can cutest with a sample problem. Execute the command in any direction
+3. Test. Now we can use cutest with a sample problem. Execute the command under any directory
 ```shell
 $ cutest2matlab_osx LUBRIFC
 ```
