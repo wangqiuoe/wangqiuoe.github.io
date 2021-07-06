@@ -297,4 +297,4 @@ Now you can load the decoded problem in Matlab:
     >> [f,g] = cutest_obj(prob.x);
     ```
 See `$CUTEST/src/matlab/README.matlab` for more information on the Matlab interface.
-4. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` 
+5. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` or [online](https://www.cuter.rl.ac.uk/Problems/mastsif.shtml)
