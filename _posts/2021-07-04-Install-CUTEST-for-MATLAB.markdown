@@ -281,4 +281,4 @@ $ matlab #start a matlab iterface
 >> prob = cutest_setup() % stucture prob will be shown
 ```
 See `$CUTEST/src/matlab/README.matlab` for more information on the Matlab interface.
-
+4. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` 
