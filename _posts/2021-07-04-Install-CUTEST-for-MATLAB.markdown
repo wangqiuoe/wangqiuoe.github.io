@@ -295,7 +295,7 @@ Now you can load the decoded problem in Matlab:
        linear: [2500x1 logical]     % array indicating linear constraints
          name: 'LUBRIFC   '         % problem name
     
-       >> [f,g] = cutest_obj(prob.x);
+    >> [f,g] = cutest_obj(prob.x);
     ```
 See `$CUTEST/src/matlab/README.matlab` for more information on the Matlab interface.
 4. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` 
