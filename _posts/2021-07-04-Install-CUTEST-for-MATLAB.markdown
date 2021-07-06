@@ -276,9 +276,26 @@ AUTOMAT.d         ELFUN.o           EXTER.o           GROUP.o           RANGE.f 
 ELFUN.f           EXTER.f           GROUP.f           OUTSDIF.d         RANGE.o           mcutest.mexmaci64
 ```
 Now you can load the decoded problem in Matlab:
-```
-$ matlab #start a matlab iterface
->> prob = cutest_setup() % stucture prob will be shown
-```
+    ```
+    $ matlab #start a matlab iterface
+    >> prob = cutest_setup() % stucture prob will be shown
+       prob =
+    
+            n: 3751                 % number of variables
+            m: 2500                 % number of constraints
+         nnzh: 8749                 % number of nonzeros in Hessian of Lagrangian
+         nnzj: 1572494              % number of nonzeros in constraint Jacobian
+            x: [3751x1 double]      % initial guess
+           bl: [3751x1 double]      % lower bounds on variables
+           bu: [3751x1 double]      % upper bounds on variables
+            v: [2500x1 double]      % initial Lagrange multipliers
+           cl: [2500x1 double]      % left-hand side of constraints
+           cu: [2500x1 double]      % right-hand side of constraints
+       equatn: [2500x1 logical]     % array indicating equality constraints
+       linear: [2500x1 logical]     % array indicating linear constraints
+         name: 'LUBRIFC   '         % problem name
+    
+       >> [f,g] = cutest_obj(prob.x);
+    ```
 See `$CUTEST/src/matlab/README.matlab` for more information on the Matlab interface.
 4. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` 
