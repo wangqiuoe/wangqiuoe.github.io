@@ -52,7 +52,7 @@ $ echo $MYMATLAB
 $ cutest2matlab_osx LUBRIFC
 ```
 The printout is like
-```shell
+```python
 #!/bin/bash -vx
 ###############################################################################
 #
