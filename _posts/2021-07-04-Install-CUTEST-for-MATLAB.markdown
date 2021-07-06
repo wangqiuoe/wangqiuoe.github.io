@@ -3,8 +3,7 @@ layout: post
 title:  "Install-CUTEST-for-MATLAB"
 date:   2021-07-04 00:00:00 +0800
 ---
-The installation of cutest --with-matlab generally follows the instructions in [Homebrew's CUTEst Tap](https://github.com/optimizers/homebrew-cutest) and [Xi's blog](http://xihey.com/2017/12/12/Installing-CUTEst-on-MacOSX-with-Matlab-Python/). However, since I use the newest Matlab (2021a), there are some different procedures from those two instructions.
-
+I installed cutest --with-matlab generally following the instructions of [Homebrew's CUTEst Tap](https://github.com/optimizers/homebrew-cutest) and [Xi's blog](http://xihey.com/2017/12/12/Installing-CUTEst-on-MacOSX-with-Matlab-Python/), perhaps with some different procedures from those two instructions.
 
 The installlation is based on Matlab R2021a, macOS Big Sur 11.4, and Xcode Version 12.5.1. 
 
