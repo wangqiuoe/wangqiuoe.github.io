@@ -298,3 +298,9 @@ Now you can load the decoded problem in Matlab:
     ```
 See `$CUTEST/src/matlab/README.matlab` for more information on the Matlab interface.
 5. The list of problems can be found in directory `/usr/local/opt/mastsif/share/mastsif/` or [online](https://www.cuter.rl.ac.uk/Problems/mastsif.shtml)
+6. Find an instance: run below program 
+```shell
+$ $SIFDECODE/bin/select
+```
+and choose the required class of problem. For example, the unconstrained problems are Constraint type is U. 
+
